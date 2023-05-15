@@ -1,4 +1,6 @@
 # tool
-pyhon开发的一些小工具
-# YOLOx模型 ./YOLOx
-> 主要包含模型文件model以及数据读取文件
+主要记录一些学习资料
+# 学习资料包括python、pytorch、linux命令等
+> python基础知识
+> pytorch基础
+> shell脚本知识
