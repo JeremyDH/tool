@@ -42,3 +42,40 @@ git reset --hard 提交id
 
 #强推远程
 git push -f
+
+#本地创建分支，并将分支推送到远程库
+首先在本地创建分支，并将切换到该分支
+git push origin 分支名
+
+#向远程仓库推送和pull的时候切不可直接使用命令行，记住添加分支名字
+git push origin 分支名
+git pull origin 分支名
+
+#如果每次添加分支名比较麻烦，可以进行关联
+git branch --set-upstream-to = origin/分支名
+
+
+#去远程仓库拉取分支的内容
+git clone git地址  #主干拉取
+git clone -b 分支名 git地址   #分支这样拉取
+
+使用git pull 的目的是确定代码是最新的
+
+
+#如果当前的分支任务已经完成需要将分支合并到主干
+首先切换到主干分支，然后将分支代码合并到主干
+git checkout 主干
+git merge 分支名
+将主干推送上去即可
+git push 
+
+
+#在merge操作时，如果发生合并冲突、会暂定合并，必须手动解决，
+1、找到冲突文件，手动合并，解决后，删除git自动写的标注符号，类似于这种带箭头的<<<或>>>
+2、通过提交3部曲提交到线上。
+     git add .
+   git commit -m '解决冲突'
+   git push
+3、最后再使用合并的指令进行合并
+     git merge 分支名
+
